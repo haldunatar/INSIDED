@@ -1,0 +1,872 @@
+/* --------------------------------------------------------
+Author: Haldun Atar
+email: atarhaldun@gmail.com
+website: http://haldunatar.com
+last modified: 14.12.2013
+----------------------------------------------------------*/
+/* Add Stuff Here */
+/* Colors */
+/* Reset */
+html, body, div, h1, h2, h3, h4, p, a, em, img, ul, li, form,
+table, tr, td, header, menu, div, span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center; }
+
+body, html {
+  height: 100%; }
+
+/* Page Wrap */
+.wrap {
+  padding-left: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s; }
+
+/* Top Bar */
+.top_bar {
+  float: left;
+  width: 100%;
+  height: 50px;
+  background: #111111;
+  position: fixed;
+  z-index: 999; }
+
+.logo, .user {
+  width: 100%;
+  height: 50px; }
+  .logo img, .user img {
+    float: left;
+    margin: 10px; }
+
+.msgBox {
+  float: right;
+  width: 150px;
+  height: 20px;
+  margin: 15px 5.5% 0 0; }
+  .msgBox span {
+    float: left;
+    width: 100px;
+    height: 20px;
+    font-size: 1.10em;
+    color: white;
+    line-height: 25px; }
+
+.mails {
+  float: right;
+  width: 30px;
+  height: 23px;
+  color: white;
+  text-align: left;
+  padding-left: 5px;
+  font-size: 0.90em;
+  line-height: 25px;
+  font-weight: bold;
+  border-radius: 2px;
+  background: #1eacf4; }
+
+/* Top Bar END */
+/* Main Section */
+.main_section {
+  width: 100%;
+  height: 100%; }
+
+aside {
+  margin-left: -250px;
+  left: 250px;
+  top: 50px;
+  width: 250px;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  background: #f8f8f8;
+  border-right: 1px solid #c5c5c5; }
+
+/* Resize Svg fonts */
+.svg {
+  width: 15px;
+  height: 15px;
+  display: inline-block; }
+
+nav {
+  float: left;
+  width: 100%;
+  height: auto; }
+  nav ul {
+    list-style-type: none; }
+  nav li {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #c5c5c5;
+    display: inline-block;
+    text-align: left;
+    padding-left: 15px; }
+  nav h3 {
+    font-size: 1.10em;
+    text-align: left;
+    line-height: 40px; }
+  nav ul ul li {
+    width: 130px;
+    height: 40px;
+    text-align: left;
+    margin-left: 0;
+    display: block;
+    border: none; }
+  nav li a {
+    font-size: 1.10em;
+    line-height: 40px;
+    color: black;
+    text-decoration: none;
+    text-align: left; }
+  nav ul ul {
+    display: none; }
+  nav li.active ul {
+    display: block; }
+
+/* Nav Sprites */
+.close_aside {
+  float: left;
+  width: 100px;
+  height: 40px;
+  margin-left: 1px;
+  color: #9a9a9a;
+  cursor: pointer;
+  line-height: 40px; }
+
+section {
+  width: 100%;
+  position: relative;
+  top: 70px;
+  margin-bottom: 170px; }
+
+/* Filter Options Container */
+/* Container Object /.. Add Container class to each filter container */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  background: #f8f8f8;
+  border: 1px solid #c5c5c5; }
+
+/* Filter Row */
+.filter_row {
+  /* Container */
+  height: auto; }
+
+.advance_search {
+  width: 100%;
+  height: auto; }
+
+.addRow {
+  width: 100%;
+  height: 50px;
+  clear: both;
+  display: block; }
+  .addRow span {
+    width: 65px;
+    height: 17px;
+    padding: 5px;
+    margin: 0 0 20px 20px;
+    display: block;
+    background: #95c730;
+    border: 1px solid #78a81e;
+    color: white;
+    cursor: pointer;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    -webkit-touch-callout: none; }
+
+.closeCross {
+  float: left;
+  width: 20px;
+  height: 18px;
+  padding: 3px;
+  background: #e0735e;
+  position: relative;
+  top: 51px;
+  cursor: pointer;
+  border-radius: 1.5px;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-touch-callout: none; }
+
+/*************** CUSTOM SELECT DROPDOWNS ***************/
+/* Conainer Header */
+header {
+  float: left;
+  width: 90%;
+  height: 20px;
+  clear: both;
+  text-align: left;
+  margin-top: 10px;
+  padding-left: 23px;
+  font-size: 1.10em;
+  font-weight: bold; }
+
+/* Select Box Hidden Dropdown */
+.select_simple, .select_multi, .select_datePicker {
+  position: absolute;
+  width: 200px;
+  height: 25px;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+  overflow: hidden;
+  top: 0;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* Select Box..*/
+.select_simple_header {
+  float: left;
+  width: 190px;
+  height: 20px;
+  padding: 3px 0 0 6px;
+  color: #6f6f6f;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 10px;
+  /* Select Dropdown Arrow! */
+  /* Default Select Name / is used to be replaced with selected checkbox value*/ }
+  .select_simple_header span {
+    float: right;
+    position: relative;
+    top: 8px;
+    display: block;
+    width: 0;
+    height: 0; }
+  .select_simple_header p {
+    float: left;
+    display: inline-block; }
+
+.select_multi_header {
+  float: left;
+  width: 190px;
+  height: 20px;
+  padding: 3px 0 0 6px;
+  color: #6f6f6f;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 10px; }
+  .select_multi_header span {
+    float: right;
+    position: relative;
+    top: 8px;
+    display: block;
+    width: 0;
+    height: 0; }
+  .select_multi_header p {
+    float: left;
+    display: inline-block; }
+
+.select_datePicker {
+  z-index: 2; }
+
+/* Select box for Row Numbers Selection / Restyle Select Box */
+.select_rows {
+  float: right;
+  position: relative;
+  width: 90px;
+  margin: 0; }
+
+.select_rows_arrow {
+  width: 80px; }
+
+/* Select box for Table bottom / Restyle Select Box */
+.select_table {
+  float: left;
+  position: relative;
+  width: 150px;
+  margin: 12px; }
+
+.select_table_arrow {
+  width: 140px; }
+
+.dropDowns {
+  postition: relative;
+  width: 200px;
+  height: 150px;
+  margin: 10px 0 0 20px; }
+
+.row1 {
+  top: 10px; }
+
+.row2 {
+  top: 50px; }
+
+.row3 {
+  top: 90px; }
+
+.row4 {
+  top: 10px; }
+
+.row5 {
+  top: 50px; }
+
+.row6 {
+  top: 90px; }
+
+.row7 {
+  top: 50px; }
+
+.select_datePicker_header {
+  float: left;
+  width: 190px;
+  height: 20px;
+  padding: 3px 0 0 6px;
+  color: #6f6f6f;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 10px; }
+  .select_datePicker_header span {
+    float: right;
+    position: relative;
+    top: 8px;
+    display: block;
+    width: 0;
+    height: 0; }
+  .select_datePicker_header p {
+    float: left;
+    display: inline-block; }
+
+.calendarActive {
+  width: 200px;
+  height: 260px;
+  background: white; }
+
+/* Select Dropdown Arrow Up & Down / Manipulate with jQuery */
+.deActiveArrow {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #646464; }
+
+.activeArrow {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #646464; }
+
+/* Anything that needs to be in Option Box */
+.optionBox_simple, .optionBox_multi {
+  float: left;
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+  z-index: 2; }
+  .optionBox_simple label, .optionBox_multi label {
+    float: left;
+    height: 20px;
+    width: auto;
+    display: block;
+    margin-top: 6px;
+    padding-left: 10px; }
+  .optionBox_simple h3, .optionBox_multi h3 {
+    display: block;
+    clear: both;
+    font-size: 1.00em;
+    padding: 10px 0 0 5px;
+    text-align: left; }
+  .optionBox_simple input[type="checkbox"], .optionBox_multi input[type="checkbox"] {
+    float: left;
+    width: 180px;
+    height: 15px;
+    clear: both;
+    margin: 8px auto 5px auto;
+    display: none; }
+  .optionBox_simple input[type="checkbox"] + label, .optionBox_multi input[type="checkbox"] + label {
+    display: block;
+    width: 180px;
+    height: 30px;
+    background: #f6f0f0;
+    line-height: 30px;
+    margin-left: 5px;
+    text-align: left;
+    cursor: pointer; }
+  .optionBox_simple input[type="checkbox"] + label:hover, .optionBox_multi input[type="checkbox"] + label:hover {
+    background: #f1e7e7; }
+
+/* Select box for Row Numbers Selection / Restyle Select Box Options */
+.select_rows input[type="checkbox"] + label {
+  width: 70px;
+  display: block;
+  clear: both; }
+
+/* Select box for Table bottom / Restyle Select Box Options */
+.select_table_option input[type="checkbox"] + label {
+  width: 130px;
+  display: block;
+  clear: both; }
+
+/* Open hidden DropDown / Manipulate with jQuery */
+.activeSelect {
+  height: auto;
+  background: white;
+  z-index: 3; }
+
+.datePickerBox {
+  width: 200px;
+  display: block;
+  height: 250px;
+  background: white;
+  z-index: 2; }
+
+/* Check All & Uncheck All / Manipulate with jQuery */
+.multipleOption {
+  float: left;
+  width: 85px;
+  display: inline;
+  color: #abd8f7;
+  cursor: pointer;
+  margin-left: 5px;
+  text-decoration: underline;
+  text-align: left; }
+
+#selectMulti input.selectMulti {
+  float: left;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px; }
+
+#selectMulti label.selectMulti {
+  float: left;
+  width: 120px;
+  background: transparent;
+  line-height: 20px; }
+
+/* Disactive/Active the Select Box Header */
+.disactive-box1,
+.disactive-box2,
+.disactive-box3,
+.disactive-box4 {
+  float: left;
+  position: absolute;
+  width: 220px;
+  height: 30px;
+  background: #f8f8f8;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  z-index: 2; }
+
+/* Custom Select Dropdown END */
+/* Advance Search END */
+/* Checkbox Columns */
+.search_columns {
+  width: 100%;
+  height: auto;
+  margin: 10px auto 10px auto;
+  border-top: 1px solid #c5c5c5; }
+  .search_columns input[type="checkbox"] {
+    float: left;
+    width: 15px;
+    height: 15px;
+    display: block;
+    clear: both;
+    margin: 10px 0 0 20px; }
+  .search_columns label {
+    float: left;
+    display: block;
+    margin: 8px 0 0 5px;
+    -webkit-touch-callout: none;
+    /*No Annoying Text Highlight*/
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+
+.filter_footer {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #c5c5c5; }
+  .filter_footer span:first-child {
+    float: left;
+    width: 60px;
+    height: 17px;
+    padding: 5px;
+    margin: 10px 10px 10px 20px;
+    background: #24bbf4;
+    border: 1px solid #1797c6;
+    color: white;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    -webkit-touch-callout: none; }
+  .filter_footer span:last-child {
+    float: left;
+    margin-top: 15px;
+    color: red;
+    cursor: pointer; }
+  .filter_footer span:last-child:hover {
+    text-decoration: underline; }
+
+/* Filter Tags */
+.filter_tags {
+  /* Container */
+  height: auto;
+  background: white;
+  border: none; }
+
+.tag {
+  float: left;
+  width: auto;
+  padding: 5px;
+  height: auto;
+  border: 1px solid red;
+  margin: 10px 10px 0 0;
+  display: inline-block;
+  background: #f8f8f8;
+  border: 1px solid #c5c5c5;
+  cursor: pointer; }
+
+.clearAll {
+  width: auto;
+  color: red;
+  border: none;
+  text-decoration: underline;
+  font-size: 1.20em;
+  background: white; }
+
+/* Pagination */
+.pagination {
+  float: right;
+  width: 400px;
+  height: 35px;
+  position: relative;
+  text-align: left;
+  padding-top: 15px; }
+
+.pagination_links {
+  float: left;
+  width: 300px; }
+
+.pageLinks {
+  width: 30px;
+  display: inline-block;
+  color: #e2e2e2;
+  text-decoration: none; }
+
+.nextPage {
+  color: #74c6f6; }
+
+.activePageNum {
+  width: 10px;
+  height: 10px;
+  padding: 8px 7px 8px 10px;
+  margin: 0 5px 0 5px;
+  border: 1px solid #c5c5c5; }
+
+/* Table Results */
+.user_table {
+  /* Container */
+  height: auto; }
+  .user_table table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse; }
+  .user_table th, .user_table td {
+    height: 40px;
+    color: black;
+    border: 1px solid #c5c5c5;
+    border-left: none;
+    padding: 10px 0 0 10px;
+    border-collapse: collapse; }
+  .user_table th {
+    height: 50px;
+    padding: 0;
+    border: none;
+    background: #fafafa; }
+  .user_table th.last {
+    border-right: none; }
+
+.activeTableRow {
+  background: #d8f1fc; }
+
+.table_names {
+  text-align: left;
+  padding-left: 20px;
+  border-left: none;
+  min-width: 220px; }
+
+input[name="checkPerson"] {
+  margin-right: 10px; }
+
+input[id="username"] {
+  margin-left: 14px; }
+
+.personFoto {
+  vertical-align: top;
+  margin-right: 5px; }
+
+.personLink {
+  float: right;
+  margin-right: 10px; }
+
+.allNames {
+  margin-left: 30px;
+  background: red; }
+
+.table_bottom {
+  width: 100%;
+  height: 50px; }
+
+.table_selectBoxes {
+  width: 100%;
+  height: auto;
+  display: none; }
+
+.table_apply {
+  float: left;
+  display: inline-block;
+  width: 50px;
+  height: 8px;
+  padding: 8px;
+  margin: 12px;
+  line-height: 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #f8f8f8;
+  border: 1px solid #c5c5c5;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-touch-callout: none;
+  position: relative; }
+
+.filter_bottom {
+  /* Container */
+  height: 50px;
+  background: white;
+  border: none; }
+
+.filter_tags_bottom {
+  width: 100%; }
+  .filter_tags_bottom .pagination {
+    float: right; }
+
+/* Main Section  */
+/* Responsive Colms */
+/* top_bar*/
+.top_bar_1_2 {
+  width: 20%; }
+
+.top_bar_2_2 {
+  width: 80%; }
+
+/* Advance Search */
+.advance_search_3 {
+  width: 230px;
+  position: relative; }
+
+/* Checkbox columns*/
+.colmns_1_6 {
+  width: 16.6%; }
+
+.colmns_2_6 {
+  width: 16.6%; }
+
+.colmns_3_6 {
+  width: 16.6%; }
+
+.colmns_4_6 {
+  width: 16.6%; }
+
+.colmns_5_6 {
+  width: 16.6%; }
+
+.colmns_6_6 {
+  width: 16.6%; }
+
+.filter_tags_1_2 {
+  width: 55%; }
+
+.filter_tags_2_2 {
+  width: 45%; }
+
+/* Responsive Colm Structure */
+.section {
+  clear: both;
+  padding: 0;
+  margin: 0;
+  height: 100%; }
+
+.group:before,
+.group:after {
+  content: "";
+  display: table; }
+
+.group:after {
+  clear: both; }
+
+.col {
+  display: block;
+  float: left; }
+
+@media only screen and (max-width: 890px) and (max-width: 1100px) {
+  .filter_tags_1_2 {
+    width: 100%; }
+
+  .filter_tags_2_2 {
+    width: 100%; }
+
+  .colmns_1_6 {
+    width: 50%; }
+
+  .colmns_2_6 {
+    width: 50%; }
+
+  .colmns_3_6 {
+    width: 50%; }
+
+  .colmns_4_6 {
+    width: 50%;
+    margin-top: 10px; }
+
+  .colmns_5_6 {
+    width: 50%;
+    margin-top: 10px; }
+
+  .colmns_6_6 {
+    width: 50%;
+    margin-top: 10px; }
+
+  .table_names {
+    min-width: 190px; }
+
+  .user_table {
+    /* sort out borders */ }
+    .user_table table {
+      display: block;
+      position: relative;
+      width: 100%; }
+    .user_table thead {
+      display: block;
+      float: left; }
+    .user_table tbody {
+      display: block;
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+      white-space: nowrap; }
+    .user_table thead tr {
+      display: block; }
+    .user_table th {
+      height: 50px;
+      display: block;
+      text-align: left;
+      padding-left: 10px;
+      border: 1px solid #c5c5c5;
+      line-height: 40px; }
+    .user_table tbody tr {
+      display: inline-block;
+      vertical-align: top; }
+    .user_table td {
+      display: block;
+      text-align: left; }
+    .user_table .allNames {
+      margin-left: 0; }
+    .user_table th {
+      border-bottom: 0;
+      border-left: 0; }
+    .user_table td {
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0; }
+    .user_table tbody tr {
+      border-left: 1px solid #babcbf; }
+    .user_table th:last-child,
+    .user_table td:last-child {
+      border-bottom: 1px solid #c5c5c5; }
+
+  .table_bottom {
+    display: none; } }
+@media only screen and (max-width: 1100px) {
+  .wrap {
+    padding-left: 0; }
+
+  aside {
+    left: 0; }
+
+  .wrap.active {
+    position: relative;
+    left: 250px; }
+
+  .wrap.active #sidebar-wrapper {
+    left: 250px;
+    width: 250px;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s; }
+
+  .advance_search_3 {
+    width: 100%; }
+
+  .dropDowns {
+    margin: 10px auto;
+    height: 110px; }
+
+  .closeCross {
+    top: -90px;
+    margin: 0 auto;
+    float: none; }
+
+  .row4 {
+    top: 10px; }
+
+  .row5 {
+    top: 50px; }
+
+  .row6 {
+    top: 90px; }
+
+  .row7 {
+    top: 10px; }
+
+  .addRow {
+    display: none; }
+
+  .colmns_1_6 {
+    width: 33.3%; }
+
+  .colmns_2_6 {
+    width: 33.3%; }
+
+  .colmns_3_6 {
+    width: 33.3%; }
+
+  .colmns_4_6 {
+    width: 33.3%;
+    margin-top: 10px; }
+
+  .colmns_5_6 {
+    width: 33.3%;
+    margin-top: 10px; }
+
+  .colmns_6_6 {
+    width: 33.3%;
+    margin-top: 10px; }
+
+  .search_columns input[type="checkbox"] {
+    margin: 10px 0 10px 25%; } }

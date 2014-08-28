@@ -1,0 +1,254 @@
+/* --------------------------------------------------------
+Author: Haldun Atar
+email: atarhaldun@gmail.com
+website: http://haldunatar.com
+last modified: 14.12.2013
+----------------------------------------------------------*/
+
+/* Add Stuff Here */
+@import 'imports/variables/variables.scss';
+@import 'imports/mixin/mixin.scss';
+ 
+/* Reset */
+html, body, div, h1, h2, h3, h4, p, a, em, img, ul, li, form,
+table, tr, td, header, menu, div,span{margin:0;padding:0;border:0;text-align:center; }
+
+body,html{
+	  height: 100%;
+} 
+
+/* Page Wrap */
+.wrap{
+  padding-left: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+/* Top Bar */
+
+@import 'imports/sections/top_bar.scss';
+
+/* Top Bar END */
+
+
+/* Main Section */
+.main_section{
+	width:100%;
+	height:100%;
+}
+ 
+@import 'imports/sections/aside.scss';
+
+@import 'imports/sections/section.scss';
+
+/* Main Section  */
+
+
+
+/* Responsive Colms */
+
+/* top_bar*/
+.top_bar_1_2{
+	width:20%; 
+}
+.top_bar_2_2{
+	width:80%; 
+}
+
+/* Advance Search */
+.advance_search_3{
+  width:230px;
+  position:relative;
+}
+
+/* Checkbox columns*/
+.colmns_1_6{
+  width:16.6%;
+}
+.colmns_2_6{
+  width:16.6%;
+}
+.colmns_3_6{
+  width:16.6%;
+}
+.colmns_4_6{
+  width:16.6%;
+}
+.colmns_5_6{
+  width:16.6%;
+}
+.colmns_6_6{
+  width:16.6%;
+}
+.filter_tags_1_2{
+  width:55%;
+}
+.filter_tags_2_2{
+  width:45%;
+}
+
+ 
+ 
+/* Responsive Colm Structure */
+.section{
+	clear:both;
+	padding:0;
+	margin:0;
+	height:100%;
+}
+.group:before,
+.group:after{
+	content:"";
+	display:table;
+}
+.group:after{
+	clear:both;
+}
+.col{
+	display:block;
+	float:left;
+}
+
+@media only screen and (max-width:890px) and (max-width:1100px){
+  .filter_tags_1_2{
+  width:100%; 
+}
+.filter_tags_2_2{
+  width:100%; 
+}
+.colmns_1_6{
+  width:50%;
+}
+.colmns_2_6{
+  width:50%;
+}
+.colmns_3_6{
+  width:50%;
+}
+.colmns_4_6{
+  width:50%;
+  margin-top:10px;
+}
+.colmns_5_6{
+  width:50%;
+  margin-top:10px;
+}
+.colmns_6_6{
+  width:50%;
+  margin-top:10px;
+}
+
+//Get Data Table little responsive
+
+ .table_names{
+  min-width:190px; 
+ }
+ .user_table{
+ 
+  table { display: block; position: relative; width: 100%; }
+  thead { display: block; float: left; }
+  tbody { display: block; width:auto; position: relative; overflow-x: auto; white-space: nowrap; }
+  thead tr { display: block;}
+ 
+  th {height:50px; display: block; text-align:left; padding-left:10px; border:1px solid #c5c5c5; line-height:40px;}
+  tbody tr { display: inline-block; vertical-align: top; }
+  td {display: block; text-align: left; }
+ 
+ .allNames{
+  margin-left:0;
+  }
+  /* sort out borders */
+ 
+th { border-bottom: 0; border-left: 0; }
+td { border-left: 0; border-right: 0; border-bottom: 0; }
+tbody tr { border-left: 1px solid #babcbf; }
+th:last-child,
+td:last-child { border-bottom: 1px solid #c5c5c5; }
+}
+.table_bottom{
+  display:none;
+} 
+
+}//Close
+@media only screen and (max-width:1100px) {
+
+    .wrap {
+      padding-left: 0;
+    }
+
+    aside {
+      left: 0;
+    }
+
+    .wrap.active {
+      position: relative;
+      left: 250px;
+    }
+
+    .wrap.active #sidebar-wrapper {
+      left: 250px;
+      width: 250px;
+      -webkit-transition: all 0.4s ease 0s;
+      -moz-transition: all 0.4s ease 0s;
+      -o-transition: all 0.4s ease 0s;
+      transition: all 0.4s ease 0s;
+    }
+    .advance_search_3{
+      width:100%;
+    }
+    .dropDowns{
+      margin:10px auto;
+      height:110px;
+    }
+    .closeCross{
+      top:-90px;
+      margin:0 auto;
+      float:none;
+    }
+    .row4{
+      top:10px;
+    }
+    .row5{
+      top:50px;
+    }
+    .row6{
+      top:90px;
+    }
+    .row7{
+    top:10px;
+}
+.addRow{
+  display:none;
+}
+.colmns_1_6{
+  width:33.3%;
+}
+.colmns_2_6{
+  width:33.3%;
+}
+.colmns_3_6{
+  width:33.3%;
+}
+.colmns_4_6{
+  width:33.3%;
+  margin-top:10px;
+}
+.colmns_5_6{
+  width:33.3%;
+  margin-top:10px;
+}
+.colmns_6_6{
+  width:33.3%;
+  margin-top:10px;
+}
+
+.search_columns input[type="checkbox"]{
+    margin:10px 0 10px 25%;
+
+}
+ 
+ 
+
+}//Close

@@ -1,0 +1,87 @@
+aside {
+  margin-left: -250px;
+  left: 250px;
+  top:50px;
+  width: 250px;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  background:$sectionBg;
+  border-right:1px solid $borderColor;
+}
+ 
+/* Resize Svg fonts */ 
+.svg{
+ 	width:15px;
+ 	height:15px;
+ 	display:inline-block;
+}
+ 
+nav{
+	float:left;
+	width:100%;
+	height:auto;
+
+	ul{
+		list-style-type:none;
+	} 
+	
+	li{
+		width:100%;
+		height:auto;
+		border-bottom:1px solid $borderColor;	
+		display:inline-block;
+		text-align:left;
+		padding-left:15px;
+	}	
+
+	h3{
+    	font-size:1.10em;
+		text-align:left;
+		line-height:40px;
+ 
+	}
+
+	ul ul li{
+		width:130px;
+		height:40px;
+		text-align:left;
+		margin-left:0;
+		display:block;
+		border:none;
+ 
+	} 
+
+	li a{
+		font-size:1.10em;
+		line-height:40px;
+		color:black;
+		text-decoration:none;
+		text-align:left;
+ 
+	}
+	ul ul{
+		display:none;
+	}
+
+	li.active ul {
+		display: block;
+	}
+
+} 
+/* Nav Sprites */
+ 
+.close_aside{
+	float:left;
+	width:100px;
+	height:40px;
+	margin-left:1px;
+	color:#9a9a9a;
+	cursor:pointer;
+	line-height:40px;
+} 

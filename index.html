@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.min.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+    
+ <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="js/svg-8.js"></script>
+   <![endif]-->
+<title>Opdracht INSIDED</title>
+</head>
+<body>
+	<!--Svg Sprites-->  
+<svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="656" height="80" viewBox="0 0 656 80">
+<defs>
+<g id="icon-tools" fill="#000">
+	<path class="path1" d="M22.386 36.329c1.316 1.313 6.384 6.662 6.384 6.662l2.81-2.898-4.404-4.551 8.454-8.979c0 0-3.816-3.721-2.146-2.239 1.597-5.93 0.142-12.546-4.363-17.206-4.465-4.624-10.81-6.14-16.511-4.548l9.66 9.978-2.541 9.79-9.458 2.612-9.655-9.98c-1.54 5.893-0.076 12.448 4.399 17.075 4.695 4.853 11.455 6.279 17.37 4.285zM54.595 46.034l-11.65 11.508 19.213 19.907c1.567 1.626 3.633 2.437 5.693 2.437 2.051 0 4.111-0.811 5.688-2.437 3.144-3.252 3.144-8.515 0-11.767l-18.945-19.648zM79.975 12.644l-12.236-12.644-36.068 37.289 4.404 4.551-21.589 22.314-4.934 2.637-6.97 11.372 1.775 1.841 11.003-7.207 2.551-5.103 21.589-22.309 4.407 4.551 36.068-37.291z"></path>
+</g>
+<g id="icon-cog">
+	<path class="path1" d="M80 47.507v-15.015l-11.467-1.911c-0.465-1.417-1.033-2.787-1.695-4.102l6.754-9.456-10.617-10.617-9.44 6.742c-1.321-0.668-2.698-1.241-4.123-1.711l-1.906-11.439h-15.015l-1.906 11.439c-1.424 0.47-2.801 1.043-4.122 1.711l-9.44-6.742-10.617 10.617 6.754 9.456c-0.662 1.315-1.229 2.685-1.695 4.101l-11.467 1.911v15.015l11.494 1.916c0.466 1.404 1.032 2.762 1.691 4.065l-6.777 9.488 10.617 10.617 9.504-6.789c1.297 0.652 2.648 1.213 4.044 1.675l1.92 11.521h15.015l1.92-11.521c1.396-0.461 2.747-1.022 4.044-1.674l9.504 6.788 10.617-10.617-6.777-9.488c0.659-1.303 1.225-2.661 1.691-4.065l11.494-1.915zM40 50c-5.523 0-10-4.477-10-10s4.477-10 10-10c5.523 0 10 4.477 10 10s-4.477 10-10 10z"></path>
+</g>
+<g id="icon-pencil">
+	<path class="path1" d="M66.244 13.752c-5.768-5.772-10.1-4.908-10.1-4.908l-43.304 43.304-4.040 19.052 19.052-4.040 43.3-43.3c0 0 0.868-4.332-4.908-10.108zM26.716 64.868l-6.492 1.4c-0.628-1.172-1.384-2.344-2.764-3.728-1.38-1.38-2.556-2.132-3.728-2.76l1.404-6.496 1.876-1.876c0 0 3.536 0.072 7.524 4.060 3.992 3.992 4.064 7.528 4.064 7.528l-1.884 1.872z"></path>
+</g>
+<g id="icon-user">
+	<path class="path1" d="M59.28 57.792c-9.86-3.592-13.012-6.624-13.012-13.116 0-3.896 3.012-2.624 4.332-9.76 0.548-2.96 3.208-0.048 3.72-6.804 0-2.692-1.452-3.364-1.452-3.364s0.74-3.988 1.028-7.052c0.352-3.824-2.208-13.696-15.896-13.696-13.684 0-16.252 9.872-15.892 13.696 0.288 3.064 1.028 7.052 1.028 7.052s-1.456 0.668-1.456 3.364c0.508 6.756 3.168 3.844 3.716 6.804 1.324 7.136 4.336 5.864 4.336 9.76 0 6.492-3.152 9.524-13.012 13.116-9.896 3.6-16.32 7.276-16.32 9.784 0 2.504 0 8.42 0 8.42h75.2c0 0 0-5.916 0-8.42s-6.428-6.18-16.32-9.784z"></path>
+</g>
+<g id="icon-pictures">
+	<path class="path1" d="M68.5 28.692l-8.184-22.544c-0.604-1.664-2.38-2.544-3.956-1.968l-54.388 19.852c-1.58 0.572-2.376 2.388-1.772 4.052l8.628 23.768v-12.74c0-5.748 4.592-10.42 10.244-10.42h14.372l17.14-12.032 9.92 12.032h7.996zM76.952 35.908h-57.88c-1.68 0-3.048 1.436-3.048 3.208v37.684c0 1.768 1.364 3.208 3.048 3.208h57.88c1.684 0 3.048-1.436 3.048-3.208v-37.688c0-1.768-1.364-3.204-3.048-3.204zM72.536 71.988h-47.98v-6.876l7.38-17.18 11.076 13.748 10.388-10.648 13.356-4.82 5.78 12.888v12.888z"></path>
+</g>
+<g id="icon-light-bulb">
+	<path class="path1" d="M28.74 76.68c3.156 2.040 6.812 3.42 11.26 3.312 4.448 0.108 8.1-1.272 11.256-3.312v-8.28h-22.516v8.28zM50.784 63.596c0-17.424 18.524-23 17.136-40.356-0.872-10.952-8.292-23.24-27.92-23.24s-27.048 12.288-27.92 23.24c-1.388 17.36 17.132 22.932 17.132 40.356h21.572zM20.552 23.872c0.832-10.396 7.904-15.668 19.448-15.668s18.616 5.272 19.444 15.668c0.452 5.692-2.82 9.488-7.24 15.704-3.252 4.584-7.1 9.996-8.9 17.044h-6.612c-1.8-7.048-5.644-12.456-8.904-17.044-4.416-6.22-7.688-10.012-7.236-15.704z"></path>
+</g>
+<g id="icon-bars">
+	<path class="path1" d="M68 4h-8.8c-2.208 0-3.2 1.792-3.2 4v68h16v-68c0-2.208-1.788-4-4-4zM44 28h-8.8c-2.208 0-3.2 1.792-3.2 4v44h16v-44c0-2.208-1.788-4-4-4zM20 52h-8.8c-2.208 0-3.2 1.788-3.2 4v20h16v-20c0-2.212-1.792-4-4-4z"></path>
+</g>
+<g id="icon-arrow-left2">
+	<path class="path1" d="M76.8 40c0-20.324-16.476-36.8-36.8-36.8s-36.8 16.476-36.8 36.8c0 20.328 16.476 36.804 36.8 36.804s36.8-16.48 36.8-36.804zM11.2 40c0-15.904 12.896-28.8 28.8-28.8s28.8 12.896 28.8 28.8c0 15.908-12.896 28.804-28.8 28.804s-28.8-12.896-28.8-28.804zM55.4 47.2v-14.4h-16.36v-9l-15.24 16.2 15.24 16.2v-9h16.36z"></path>
+</g>
+<g id="icon-envelope" fill="#ffffff">
+	<path class="path1" d="M72.5 10h-65c-4.125 0-7.5 3.375-7.5 7.5v50c0 4.125 3.375 7.5 7.5 7.5h65c4.125 0 7.5-3.375 7.5-7.5v-50c0-4.125-3.375-7.5-7.5-7.5zM31.152 42.998l-21.152 16.476v-39.191l21.152 22.715zM13.78 20h52.441l-26.22 19.688-26.22-19.688zM31.976 43.883l8.024 8.617 8.024-8.617 16.45 21.117h-48.947l16.449-21.117zM48.848 42.998l21.152-22.715v39.191l-21.152-16.476z"></path>
+</g>
+</defs></svg>
+
+<!--Svg Sprites End-->  
+
+<div class="top_bar">
+		<div class="section group">
+
+			<div class="col top_bar_1_2">
+				
+				<div class="logo">
+					<a href="#"><img src="img/logo.png" alt="Insided.nl" width="98" height="30"/></a>
+				</div><!---logo-->
+
+			</div><!--top_bar_1_2-->
+
+			<div class="col top_bar_2_2">
+				
+				<div class="user">
+					<div class="msgBox">
+						<span>Haldun Atar</span>
+						<div class="mails">5
+							<div class="svg">
+	<svg class="icon icon-envelope" viewBox="0 0 80 80"><use xlink:href="#icon-envelope"></use></svg>
+	</div><!--svg-->
+						</div><!--mails-->
+					</div><!--msgBox-->
+
+				</div><!---user-->
+
+			</div><!--top_bar_2_2-->
+
+		</div><!--section group-->
+</div><!--top_bar-->
+
+
+
+
+<div class="wrap">
+ 
+ 
+<aside>
+<nav>
+	<ul>
+	<li>
+	<div class="svg">
+	<svg class="icon icon-bars" viewBox="0 0 80 80"><use xlink:href="#icon-bars"></use></svg>
+	</div><!--svg-->
+	<a class="js-nav" href="#">Analytics</a> 
+	</li>
+	<li><div class="svg">
+	<svg class="icon icon-tools" viewBox="0 0 80 80"><use xlink:href="#icon-tools"></use></svg>
+	</div><!--svg-->
+	<a class="js-nav" href="#">Moderation</a> 
+	</li>
+	<li class="active">
+	<div class="svg">
+	<svg class="icon icon-user" viewBox="0 0 80 80"><use xlink:href="#icon-user"></use></svg>
+	</div><!--svg-->
+	<a class="js-nav" href="#">Users</a>
+		<ul>
+		<li><a href="#">Overview</a></li>
+		<li><a href="#">Custom Filter</a></li>
+		<li><a href="#">Create New User</a></li>
+		</ul>
+	</li>
+	<li>
+	<div class="svg">
+	<svg class="icon icon-cog" viewBox="0 0 80 80"><use xlink:href="#icon-cog"></use></svg>
+	</div><!--svg-->
+	<a class="js-nav" href="#">Settings</a>
+		<ul>
+		<li><a href="#">Settings 1</a></li>
+		<li><a href="#">Settings 2</a></li>
+		<li><a href="#">Settings 3</a></li>
+		</ul>
+	</li>
+	<li>
+	<div class="svg">
+	<svg class="icon icon-pencil" viewBox="0 0 80 80"><use xlink:href="#icon-pencil"></use></svg>
+	</div><!--svg-->
+	<a class="js-nav" href="#">Blog</a>
+	</li>
+	<li>
+	<div class="svg">
+	<svg class="icon icon-light-bulb" viewBox="0 0 80 80"><use xlink:href="#icon-light-bulb"></use></svg>
+	</div><!--svg-->
+	<a class="js-nav" href="#">Onderzoek</a>
+	</li>
+	</ul>
+</nav>
+
+<div class="close_aside">
+	<div class="svg">
+	<svg class="icon icon-arrow-left2" viewBox="0 0 80 80"><use xlink:href="#icon-arrow-left2"></use></svg>
+	</div><!--svg-->
+	Inklapen</div><!--close_aside-->
+</aside>
+
+<section>
+				
+<div class="container filter_row">
+	<header>Advanced Search</header>
+	<div class="advance_search">
+	<div class="section group">
+ 
+						 		<div class="col advance_search_3">
+						 	<div class="dropDowns">
+ 
+      							<div class="select_simple row1 js_container">					
+    								<div class="select_simple_header"><p class="js--row1Head">Comments</p> <span class="js_arrow"> </span></div><!--select_user-->   
+										<div class="optionBox_simple js--optionRow1">
+										   <input type="checkbox" name="comments" id="Option 1" class="js--row1" value="Option 1">
+										   <label for="Option 1">Option 1</label>
+										   <input type="checkbox" name="comments" id="Option 2" class="js--row1" value="Option 2">
+										   <label for="Option 2">Option 2</label>
+											<input type="checkbox" name="comments" id="Option 3" class="js--row1" value="Option 3">
+										   <label for="Option 3">Option 3</label>
+							        </div><!--optionBox_simple-->
+								 </div><!--select_simple-->
+ 
+
+							 
+								
+								 <div class="select_datePicker row2 js_container">                        
+    <div class="select_datePicker_header"><span class="js_arrow"> </span></div><!--select_user-->   
+		<div class="optionBox_datePicker">             
+        									
+<input class="js--datePicker js--row2" type="text" name="datePicker1" id="datepicker1" value="Registration Date" readonly="readonly">
+
+	</div><!--optionBox_datePicker-->
+</div><!--select_datePicker-->
+						 
+
+									 
+
+								        <div class="select_simple row3 js_container">					
+    								<div class="select_simple_header"><p class="js--row3Head">Group</p> <span class="js_arrow"> </span></div><!--select_user-->   
+										<div class="optionBox_simple  js--optionRow2">
+										   <input type="checkbox" name="comments" id="User Group" class="js--row3" value="User Group">
+										   <label for="User Group">User Group</label>
+										   <input type="checkbox" name="comments" id="Group 2" class="js--row3" value="Group 2">
+										   <label for="Group 2">Group 2</label>
+											<input type="checkbox" name="comments" id="Group 3" class="js--row3" value="Group 3">
+										   <label for="Group 3">Group 3</label>
+							        </div><!--optionBox_simple-->
+								 </div><!--select_simple-->
+
+						 
+
+				 
+								 </div><!--dropDowns-->
+								
+						 		</div><!--advance_search_3-->
+ 
+						 		<div class="col advance_search_3">
+ 									<div class="dropDowns">
+
+ 										 <div class="select_simple row4  js_container"><div id="sec--row1" class="disactive-box1"></div>			
+    								<div class="select_simple_header"><p class="js--row4Head">is greater than</p> <span class="js_arrow"> </span></div><!--select_user-->   
+										<div class="optionBox_simple">
+										   <input type="checkbox" name="comments" id="OptionA" class="js--row4" value="OptionA">
+										   <label for="OptionA">Option a</label>
+										   <input type="checkbox" name="comments" id="OptionB" class="js--row4" value="OptionB">
+										   <label for="OptionB">Option b</label>
+											<input type="checkbox" name="comments" id="OptionC" class="js--row4" value="OptionC">
+										   <label for="OptionC">Option c</label>
+							        </div><!--optionBox_simple-->
+								 </div><!--select_simple-->
+
+								  <div class="select_simple row5 js_container"><div id="sec--row2" class="disactive-box2"></div>	 			
+    								<div class="select_simple_header"><p class="js--row5Head">Before / After / On</p> <span class="js_arrow"> </span></div><!--select_user-->   
+										<div class="optionBox_simple">
+										   <input type="checkbox" name="comments" id="before" class="js--row5" value="before">
+										   <label for="before">before</label>
+										   <input type="checkbox" name="comments" id="after" class="js--row5" value="after">
+										   <label for="after">after</label>
+											<input type="checkbox" name="comments" id="on" class="js--row5" value="on">
+										   <label for="on">on</label>
+							        </div><!--optionBox_simple-->
+								 </div><!--select_simple-->
+
+
+								 <div class="select_multi row6 js_container"><div id="sec--row3" class="disactive-box3"></div>	 	
+
+    	<div class="select_multi_header"><p class="js--row6Head">Select one or more options</p><span class="js_arrow"> </span></div><!--select_multi_header-->
+
+    		<div id="selectMulti" class="optionBox_multi">
+
+    			<div class="check_unCheckAll">
+    			<div id="checkAll" class="multipleOption">Check All</div> 
+    			<div id="unCheckAll" class="multipleOption">Uncheck All</div>
+    			</div><!--check_uncheckAll-->
+
+        <h3>Group 1</h3>
+
+        <input class="selectMulti js--row6" type="checkbox" name="user_group" id="Group1" value="Group1">
+        <label class="selectMulti js--row6" for="Group1">Group1</label>
+    	<input class="selectMulti js--row6" type="checkbox" name="user_group" id="Group2" value="Group2">
+        <label class="selectMulti js--row6" for="Group2">Group2 </label>
+        
+        <h3>Group 2</h3>
+        <input class="selectMulti js--row6" type="checkbox" name="user_group" id="GroupA" value="GroupA">
+        <label class="selectMulti js--row6" for="GroupA">GroupA</label>
+    	<input class="selectMulti js--row6" type="checkbox" name="user_group" id="GroupB" value="GroupB">
+        <label class="selectMulti js--row6" for="GroupB">GroupB</label>
+
+        </div><!--optionBox_multi-->
+	</div><!--select_multi-->
+						 		
+						 		</div><!--DropDowns-->
+						 		</div><!--advance_search_3-->
+
+						 		<div class="col advance_search_3">
+								<div class="dropDowns">
+
+						 		 <div class="select_datePicker row7 js_container"><div id="sec--row4" class="disactive-box4"></div>	                     
+    <div class="select_datePicker_header"><span class="js_arrow"> </span></div><!--select_user-->   
+		<div class="optionBox_datePicker">             					
+
+ <input class="js--datePicker js--row7" type="text" name="datePicker2" id="datepicker2" value="Date To" readonly="readonly">
+
+	</div><!--optionBox_datePicker-->
+
+</div><!--select_datePicker-->
+
+						 		</div><!--DropDowns-->
+						 		</div><!--advance_search_3-->
+<div class="col advance_search_3">
+		<div class="closeCross">X</div>				 		 
+ </div><!--advance_search_3-->
+							</div><!--section group-->
+								<div class="addRow"><span>Add Row</span></div><!--addRow-->
+						</div><!--advance_search-->
+
+
+						<div class="search_columns">
+					<header>Columns</header>
+
+					<div class="section group">
+						<div class="col colmns_1_6">
+							<form action="" method="post">
+								<input type="checkbox" name="checkboxRow1" id="checkbox1" value="checkbox1"><label for="checkbox1">Checkbox 1</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox2" value="checkbox2"><label for="checkbox2">Checkbox 2</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox3" value="checkbox3"><label for="checkbox3">Checkbox 3</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox4" value="checkbox4"><label for="checkbox4">Checkbox 4</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox5" value="checkbox5"><label for="checkbox5">Checkbox 5</label>
+							</form>
+						</div><!--col colms_6-->
+						<div class="col colmns_2_6">
+							<form action="" method="post">
+								<input type="checkbox" name="checkboxRow1" id="checkbox6" value="checkbox6"><label for="checkbox6">Checkbox 6</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox7" value="checkbox7"><label for="checkbox7">Checkbox 7</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox8" value="checkbox8"><label for="checkbox8">Checkbox 8</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox9" value="checkbox9"><label for="checkbox9">Checkbox 9</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox10" value="checkbox10"><label for="checkbox10">Checkbox 10</label>
+							</form>
+						</div><!--col colms_6-->
+						<div class="col colmns_3_6">
+							<form action="" method="post">
+								<input type="checkbox" name="checkboxRow1" id="checkbox11" value="checkbox11"><label for="checkbox11">Checkbox 11</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox12" value="checkbox12"><label for="checkbox12">Checkbox 12</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox13" value="checkbox13"><label for="checkbox13">Checkbox 13</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox14" value="checkbox14"><label for="checkbox14">Checkbox 14</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox15" value="checkbox15"><label for="checkbox15">Checkbox 15</label>
+							</form>
+						</div><!--col colms_6-->
+						<div class="col colmns_4_6">
+							<form action="" method="post">
+								<input type="checkbox" name="checkboxRow1" id="checkbox16" value="checkbox16"><label for="checkbox16">Checkbox 16</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox17" value="checkbox17"><label for="checkbox17">Checkbox 17</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox18" value="checkbox18"><label for="checkbox18">Checkbox 18</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox19" value="checkbox19"><label for="checkbox19">Checkbox 19</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox20" value="checkbox20"><label for="checkbox20">Checkbox 20</label>
+							</form>
+						</div><!--col colms_6-->
+						<div class="col colmns_5_6">
+							<form action="" method="post">
+								<input type="checkbox" name="checkboxRow1" id="checkbox21" value="checkbox21"><label for="checkbox21">Checkbox 21</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox22" value="checkbox22"><label for="checkbox22">Checkbox 22</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox23" value="checkbox23"><label for="checkbox23">Checkbox 23</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox24" value="checkbox24"><label for="checkbox24">Checkbox 24</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox25" value="checkbox25"><label for="checkbox25">Checkbox 25</label>
+							</form>
+						</div><!--col colms_6-->
+						<div class="col colmns_6_6">
+							<form action="" method="post">
+								<input type="checkbox" name="checkboxRow1" id="checkbox26" value="checkbox26"><label for="checkbox26">Checkbox 26</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox27" value="checkbox27"><label for="checkbox27">Checkbox 27</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox28" value="checkbox28"><label for="checkbox28">Checkbox 28</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox29" value="checkbox29"><label for="checkbox29">Checkbox 39</label>
+								<input type="checkbox" name="checkboxRow1" id="checkbox30" value="checkbox29"><label for="checkbox30">Checkbox 30</label>
+							</form>
+						</div><!--col colms_6-->
+					</div><!--section group-->
+						</div><!--search_columns-->
+
+						<div class="filter_footer">
+							<span>Update</span>
+							<span>Cancel</span>
+						</div><!--filter_footer-->
+
+					</div><!--filter_row-->
+
+					<div class="container filter_tags">
+						<div class="section group">
+
+							<div class="col filter_tags_1_2">
+								 &nbsp; <!--Keeps the pagination on right-->
+					<span class="tag tag1">x Comments</span> 
+					<span class="tag tag2">x Date</span>
+					<span class="tag tag3">x Group</span>
+					<span class="tag clearAll">Clear Selection</span>
+							</div><!--filter_tags_1_2-->
+							
+							<div class="col filter_tags_2_2">
+								<div class="pagination">
+									<div class="pagination_links">
+									<a class="pageLinks" href="#">First </a> |
+									<a class="pageLinks" href="#"> << </a> | 
+									<span>Page</span> 
+									<span class="activePageNum"> 1 </span>
+									<span>of 12</span> |
+									<a class="pageLinks nextPage" href="#"> >> </a> |
+									<a class="pageLinks nextPage" href="#"> Last </a> 
+ 									</div><!--pagination_links-->
+									<div class="select_simple select_rows js_container">					
+    								<div class="select_simple_header select_rows_arrow"><p>10 Rows</p> <span class="js_arrow"> </span></div><!--select_user-->   
+										<div class="optionBox_simple select_rows">
+											<input type="checkbox" name="rows" id="10 Rows" value="10 Rows">
+										   <label for="10 Rows">10 Rows</label>
+										   <input type="checkbox" name="rows" id="20 Rows" value="20 Rows">
+										   <label for="20 Rows">20 Rows</label>
+										   <input type="checkbox" name="rows" id="30 Rows" value="30 Rows">
+										   <label for="30 Rows">30 Rows</label>
+										   <input type="checkbox" name="rows" id="40 Rows" value="40 Rows">
+										   <label for="40 Rows">40 Rows</label>
+							        </div><!--optionBox_simple-->
+								 </div><!--select_simple-->
+
+								</div><!--pagination-->
+							</div><!--filter_tags_2_2-->
+					</div><!--section group-->
+					</div><!--filter_tags-->
+
+					<div class="container user_table">
+ 						 <table>
+  <thead>
+    <tr>
+      <th class="table_names allNames"><input type="checkbox" name="checkPerson" id="username"><label for="username">Username</label></th>
+      <th>Comments</th>
+      <th class="person">Topics</th>
+      <th class="person">Usergroup</th>
+      <th class="person">Registration Date</th>
+      <th class="person">Last Login</th>
+      <th class="person">Last Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="table_names"> 
+      <input type="checkbox" name="checkPerson" id="Amber">
+      <label for="Amber"><img class="personFoto" src="img/build/personFoto.jpg" width="20" height="20" alt="Person Name">Amber H.</label>
+      <div class="personLink"><a href="#">
+		<div class="svg">
+		<svg class="icon icon-pictures" viewBox="0 0 80 80"><use xlink:href="#icon-pictures"></use></svg>
+		</div><!--svg-->
+      </a> </div>
+      </td>
+      <td class="numeric">64</td>
+      <td class="numeric">9</td>
+      <td class="numeric">Registered user</td>
+      <td class="numeric">19-mar-12 12.00</td>
+      <td class="numeric">16-aug-12 12.11</td>
+      <td class="numeric">16-aug-12 16.10</td>
+    </tr>
+        <tr>
+      <td class="table_names"><input type="checkbox" name="checkPerson" id="Bart">
+        <label for="Bart"><img class="personFoto" src="img/build/personFoto.jpg" width="20" height="20" alt="Person Name">
+        Bart Pineapple</label>
+    	<div class="personLink"><a href="#">
+		<div class="svg">
+		<svg class="icon icon-pictures" viewBox="0 0 80 80"><use xlink:href="#icon-pictures"></use></svg>
+		</div><!--svg-->
+      </a> </div>
+  	</td>
+      <td class="numeric">14</td>
+      <td class="numeric">2</td>
+      <td class="numeric">Registered user</td>
+      <td class="numeric">22-mar-12 12.00</td>
+      <td class="numeric">12-aug-12 12.11</td>
+      <td class="numeric">12-aug-12 16.10</td>
+    </tr>
+        <tr>
+      <td class="table_names"><input type="checkbox" name="checkPerson" id="Caitlyn">
+        <label for="Caitlyn"><img class="personFoto" src="img/build/personFoto.jpg" width="20" height="20" alt="Person Name">
+        Caitlyn App</label>
+        <div class="personLink"><a href="#">
+		<div class="svg">
+		<svg class="icon icon-pictures" viewBox="0 0 80 80"><use xlink:href="#icon-pictures"></use></svg>
+		</div><!--svg-->
+      </a> </div>
+    </td>
+      <td class="numeric">54</td>
+      <td class="numeric">4</td>
+      <td class="numeric">Super user</td>
+      <td class="numeric">12-mar-12 12.00</td>
+      <td class="numeric">11-aug-12 12.11</td>
+      <td class="numeric">11-aug-12 16.10</td>
+    </tr>
+        <tr>
+      <td class="table_names"><input type="checkbox" name="checkPerson" id="Carmen">
+        <label for="Carmen"><img class="personFoto" src="img/build/personFoto.jpg" width="20" height="20" alt="Person Name">
+        Carmen Cand</label>
+        <div class="personLink"><a href="#">
+		<div class="svg">
+		<svg class="icon icon-pictures" viewBox="0 0 80 80"><use xlink:href="#icon-pictures"></use></svg>
+		</div><!--svg-->
+      </a> </div>
+    </td>
+      <td class="numeric">23</td>
+      <td class="numeric">9</td>
+      <td class="numeric">Registered user</td>
+      <td class="numeric">01-mar-12 12.00</td>
+      <td class="numeric">15-aug-12 12.11</td>
+      <td class="numeric">115-aug-12 16.10</td>
+    </tr>
+        <tr>
+      <td class="table_names"><input type="checkbox" name="checkPerson" id="Dolf">
+        <label for="Dolf"><img class="personFoto" src="img/build/personFoto.jpg" width="20" height="20" alt="Person Name">
+        Dolf Dreamer</label>
+        <div class="personLink"><a href="#">
+		<div class="svg">
+		<svg class="icon icon-pictures" viewBox="0 0 80 80"><use xlink:href="#icon-pictures"></use></svg>
+		</div><!--svg-->
+      </a> </div>
+    </td>
+      <td class="numeric">34</td>
+      <td class="numeric">5</td>
+      <td class="numeric">Registered user</td>
+      <td class="numeric">19-mar-12 12.00</td>
+      <td class="numeric">16-aug-12 12.11</td>
+      <td class="numeric">16-aug-12 16.10</td>
+    </tr>
+        <tr>
+      <td class="table_names"><input type="checkbox" name="checkPerson" id="Edgar">
+        <label for="Edgar"><img class="personFoto" src="img/build/personFoto.jpg" width="20" height="20" alt="Person Name">
+        Edgar Enders</label>
+        <div class="personLink"><a href="#">
+		<div class="svg">
+		<svg class="icon icon-pictures" viewBox="0 0 80 80"><use xlink:href="#icon-pictures"></use></svg>
+		</div><!--svg-->
+      </a> </div>
+    </td>
+      <td class="numeric">32</td>
+      <td class="numeric">6</td>
+      <td class="numeric">Super user</td>
+      <td class="numeric">19-mar-12 12.00</td>
+      <td class="numeric">13-aug-12 12.11</td>
+      <td class="numeric">13-aug-12 16.10</td>
+    </tr>
+        <tr>
+      <td class="table_names"><input type="checkbox" name="checkPerson" id="Jane">
+        <label for="Jane"><img class="personFoto" src="img/build/personFoto.jpg" width="20" height="20" alt="Person Name">
+        Jane Blackswan</label>
+        <div class="personLink"><a href="#">
+		<div class="svg">
+		<svg class="icon icon-pictures" viewBox="0 0 80 80"><use xlink:href="#icon-pictures"></use></svg>
+		</div><!--svg-->
+      </a> </div>
+    </td>
+      <td class="numeric">54</td>
+      <td class="numeric">1</td>
+      <td class="numeric">Modaretor</td>
+      <td class="numeric">21-mar-12 12.00</td>
+      <td class="numeric">14-aug-12 12.11</td>
+      <td class="numeric">14-aug-12 16.10</td>
+    </tr>
+        <tr>
+      <td class="table_names"><input type="checkbox" name="checkPerson" id="Jennifer">
+        <label for="Jennifer"><img class="personFoto" src="img/build/personFoto.jpg" width="20" height="20" alt="Person Name">
+        Jennifer Appleased</label>
+        <div class="personLink"><a href="#">
+		<div class="svg">
+		<svg class="icon icon-pictures" viewBox="0 0 80 80"><use xlink:href="#icon-pictures"></use></svg>
+		</div><!--svg-->
+      </a> </div>
+    </td>
+      <td class="numeric">65</td>
+      <td class="numeric">3</td>
+      <td class="numeric">Registered user</td>
+      <td class="numeric">29-mar-12 12.00</td>
+      <td class="numeric">16-aug-12 12.11</td>
+      <td class="numeric">16-aug-12 16.10</td>
+    </tr>
+        <tr>
+      <td class="table_names"><input type="checkbox" name="checkPerson" id="Jhon">
+        <label for="Jhon"><img class="personFoto" src="img/build/personFoto.jpg" width="20" height="20" alt="Person Name">
+        Jhon Doe</label>
+        <div class="personLink"><a href="#">
+		<div class="svg">
+		<svg class="icon icon-pictures" viewBox="0 0 80 80"><use xlink:href="#icon-pictures"></use></svg>
+		</div><!--svg-->
+      </a> </div>
+    </td>
+      <td class="numeric">11</td>
+      <td class="numeric">3</td>
+      <td class="numeric">Modaretor</td>
+      <td class="numeric">25-mar-12 12.00</td>
+      <td class="numeric">17-aug-12 12.11</td>
+      <td class="numeric">17-aug-12 16.10</td>
+    </tr>
+        <tr>
+      <td class="table_names"><input type="checkbox" name="checkPerson" id="Johni">
+        <label for="Johni"><img class="personFoto" src="img/build/personFoto.jpg" width="20" height="20" alt="Person Name">
+        Johni Foe</label>
+        <div class="personLink"><a href="#">
+		<div class="svg">
+		<svg class="icon icon-pictures" viewBox="0 0 80 80"><use xlink:href="#icon-pictures"></use></svg>
+		</div><!--svg-->
+      </a> </div>
+    </td>
+      <td class="numeric">92</td>
+      <td class="numeric">5</td>
+      <td class="numeric">Registered user</td>
+      <td class="numeric">23-mar-12 12.00</td>
+      <td class="numeric">14-aug-12 12.11</td>
+      <td class="numeric">14-aug-12 16.10</td>
+    </tr>
+
+ 
+  </tbody>
+</table>
+
+<div class="table_bottom">
+	<div class="table_selectBoxes">
+<div class="select_simple select_table js_container">					
+    		<div class="select_simple_header select_table_arrow"><p>Change Usergroup</p> <span class="js_arrow"> </span></div><!--select_user-->   
+					<div class="optionBox_simple select_table_option">
+											<input type="checkbox" name="table_user" id="Registered User" value="Registered User">
+										   <label for="Registered User">Registered User</label>
+										   <input type="checkbox" name="table_user" id="Super User" value="Super User">
+										   <label for="Super User">Super User</label>
+										   <input type="checkbox" name="table_user" id="Modaretor" value="Modaretor">
+										   <label for="Modaretor">Modaretor</label>
+							        </div><!--optionBox_simple-->
+								 </div><!--select_simple-->
+
+								 <div class="select_simple select_table js_container">					
+    		<div class="select_simple_header select_table_arrow"><p>Add secondary use..</p> <span class="js_arrow"> </span></div><!--select_user-->   
+					<div class="optionBox_simple select_table_option">
+											<input type="checkbox" name="table_user" id="Registered User" value="Registered User">
+										   <label for="Registered User">Registered User</label>
+										   <input type="checkbox" name="table_user" id="Super User" value="Super User">
+										   <label for="Super User">Super User</label>
+										   <input type="checkbox" name="table_user" id="Modaretor" value="Modaretor">
+										   <label for="Modaretor">Modaretor</label>
+							        </div><!--optionBox_simple-->
+								 </div><!--select_simple-->
+
+								 <div class="select_simple select_table js_container">					
+    		<div class="select_simple_header select_table_arrow"><p>Permissions</p> <span class="js_arrow"> </span></div><!--select_user-->   
+					<div class="optionBox_simple select_table_option">
+											<input type="checkbox" name="table_user" id="Registered User" value="Registered User">
+										   <label for="Registered User">Registered User</label>
+										   <input type="checkbox" name="table_user" id="Super User" value="Super User">
+										   <label for="Super User">Super User</label>
+										   <input type="checkbox" name="table_user" id="Modaretor" value="Modaretor">
+										   <label for="Modaretor">Modaretor</label>
+							        </div><!--optionBox_simple-->
+								 </div><!--select_simple-->
+
+								 <span class="table_apply">Apply</span>
+								</div><!--table_selectBoxes-->
+</div><!--table_bottom-->
+					</div><!--user_table-->
+
+					<div class="container filter_bottom">
+<div class="filter_tags_bottom">
+								<div class="pagination">
+									<div class="pagination_links">
+									<a class="pageLinks" href="#">First </a> |
+									<a class="pageLinks" href="#"> << </a> | 
+									<span>Page</span> 
+									<span class="activePageNum"> 1 </span>
+									<span>of 12</span> |
+									<a class="pageLinks nextPage" href="#"> >> </a> |
+									<a class="pageLinks nextPage" href="#"> Last </a> 
+ 									</div><!--pagination_links-->
+									<div class="select_simple select_rows js_container">					
+    								<div class="select_simple_header select_rows_arrow"><p>10 Rows</p> <span class="js_arrow"> </span></div><!--select_user-->   
+										<div class="optionBox_simple select_rows">
+											<input type="checkbox" name="rows" id="10 Rows" value="10 Rows">
+										   <label for="10 Rows">10 Rows</label>
+										   <input type="checkbox" name="rows" id="20 Rows" value="20 Rows">
+										   <label for="20 Rows">20 Rows</label>
+										   <input type="checkbox" name="rows" id="30 Rows" value="30 Rows">
+										   <label for="30 Rows">30 Rows</label>
+										   <input type="checkbox" name="rows" id="40 Rows" value="40 Rows">
+										   <label for="40 Rows">40 Rows</label>
+							        </div><!--optionBox_simple-->
+								 </div><!--select_simple-->
+
+								</div><!--pagination-->
+							</div><!--filter_tags_bottom-->
+					</div><!--filter_bottom-->
+
+
+			 	</section>
+ 
+ 
+ 
+ 
+</div><!--wrap-->
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/engine.min.js"></script>
+<script src="js/jq-ui.min.js"></script>
+
+<script>
+
+
+
+</script>
+</body>
+</html>

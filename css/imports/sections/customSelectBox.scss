@@ -1,0 +1,303 @@
+  
+/* Select Box Hidden Dropdown */
+.select_simple{
+    position:absolute;
+    width:200px;
+    height:25px;
+    border:1px solid #c5c5c5;
+    border-radius:5px;
+    overflow:hidden;
+    top:0;
+
+
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
+    -webkit-touch-callout: none;
+    @include user-select(none);
+}
+
+
+/* Select Box..*/
+.select_simple_header{
+    float:left;
+    width:190px;
+    height:20px;
+    padding:3px 0 0 6px;
+    color:#6f6f6f;
+    text-align:left;
+    cursor:pointer;
+    margin-bottom:10px;
+ 
+	
+    /* Select Dropdown Arrow! */
+    span{
+	float:right;
+	position:relative;
+	top:8px;
+	display:block;
+	width:0;
+	height:0;
+	}
+
+    /* Default Select Name / is used to be replaced with selected checkbox value*/
+    p{
+    float:left;
+    display:inline-block;
+    }
+}
+
+.select_multi{
+    @extend .select_simple;
+ 
+}
+
+.select_multi_header{
+   float:left;
+    width:190px;
+    height:20px;
+    padding:3px 0 0 6px;
+    color:#6f6f6f;
+    text-align:left;
+    cursor:pointer;
+    margin-bottom:10px;
+
+    span{
+    float:right;
+    position:relative;
+    top:8px;
+    display:block;
+    width:0;
+    height:0;
+    }
+    p{
+    float:left;
+    display:inline-block;
+    }
+}
+.select_datePicker{
+     @extend .select_simple;
+     z-index:2;
+}
+/* Select box for Row Numbers Selection / Restyle Select Box */
+.select_rows{
+    float:right;
+    position:relative; 
+    width:90px;
+    margin:0;
+}
+.select_rows_arrow{
+    width:80px;
+}
+/* Select box for Table bottom / Restyle Select Box */
+ .select_table{
+    float:left;
+    position:relative; 
+    width:150px;
+    margin:12px;
+}
+.select_table_arrow{
+    width:140px;
+}
+
+//Adjust Select Box Positions
+.dropDowns{
+    postition:relative;
+    width:200px;
+    height:150px;
+    margin:10px 0 0 20px;
+}
+.row1{
+    top:10px;  
+}
+.row2{
+    top:50px;
+}
+.row3{
+    top:90px;
+}
+.row4{
+    top:10px;  
+}
+.row5{
+    top:50px;
+}
+.row6{
+    top:90px;
+}
+.row7{
+    top:50px;
+}
+
+.select_datePicker_header{
+   float:left;
+    width:190px;
+    height:20px;
+    padding:3px 0 0 6px;
+    color:#6f6f6f;
+    text-align:left;
+    cursor:pointer;
+    margin-bottom:10px;
+
+    span{
+    float:right;
+    position:relative;
+    top:8px;
+    display:block;
+    width:0;
+    height:0;
+    }
+    p{
+    float:left;
+    display:inline-block;
+    }
+}
+.calendarActive{
+    width:200px;
+    height:260px;
+    background:white;
+    
+}
+
+ 
+/* Select Dropdown Arrow Up & Down / Manipulate with jQuery */
+.deActiveArrow{
+    display:block;
+    width:0;
+    height:0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #646464;
+}
+.activeArrow{
+    display:block;
+    width:0;
+    height:0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #646464;
+}
+/* Anything that needs to be in Option Box */
+.optionBox_simple{
+    float:left;
+    width:200px;
+    height:auto;
+    margin-bottom:10px;
+    z-index:2;
+
+    label{
+    float:left; 
+    height:20px;
+    width:auto;
+    display:block;
+    margin-top:6px;
+    padding-left:10px;
+    }
+
+    h3{
+    display:block;
+    clear:both;
+    font-size:1.00em;
+    padding:10px 0 0 5px;
+    text-align:left;
+    }
+    input[type="checkbox"]{
+    float:left;
+    width:180px;
+    height:15px;
+    clear:both;
+    margin:8px auto 5px auto;
+    display:none;
+    }
+    input[type="checkbox"] + label{
+    display:block;
+    width:180px;
+    height:30px;
+    background:#f6f0f0;
+    line-height:30px;
+    margin-left:5px;  
+    text-align:left;
+    cursor:pointer;
+    }
+    input[type="checkbox"] + label:hover{
+    background:#f1e7e7;
+    }
+    
+}
+.optionBox_multi{
+    @extend .optionBox_simple;
+}
+/* Select box for Row Numbers Selection / Restyle Select Box Options */
+.select_rows input[type="checkbox"] + label{
+    width:70px; 
+    display:block; 
+    clear:both; 
+}
+/* Select box for Table bottom / Restyle Select Box Options */
+.select_table_option input[type="checkbox"] + label{
+    width:130px; 
+    display:block; 
+    clear:both; 
+ 
+}
+
+
+/* Open hidden DropDown / Manipulate with jQuery */
+.activeSelect{
+    height:auto;
+    background:white;
+    z-index:3;
+}
+.datePickerBox{
+    width:200px;
+    display:block;
+    height:250px;
+    background:white;
+    z-index:2;
+}
+
+ 
+ 
+/* Check All & Uncheck All / Manipulate with jQuery */
+ 
+.multipleOption{
+    float:left;
+    width:85px;
+    display:inline;
+    color:#abd8f7;
+    cursor:pointer;
+    margin-left:5px;
+    text-decoration: underline;
+    text-align:left;
+}
+#selectMulti input.selectMulti {
+    float:left;
+    display:inline-block;
+    width:15px;
+    height:15px;
+    margin-left:5px;
+}
+#selectMulti label.selectMulti{
+    float:left;
+    width:120px;
+    background:transparent; 
+    line-height:20px;
+}
+ 
+/* Disactive/Active the Select Box Header */
+.disactive-box1,
+.disactive-box2,
+.disactive-box3,
+.disactive-box4
+{
+    float:left;
+    position:absolute;
+    width:220px;
+    height:30px;
+    background:$sectionBg;
+    opacity: 0.8;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; // IE8
+    z-index:2;
+
+}
+ 
